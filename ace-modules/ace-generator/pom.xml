@@ -100,5 +100,11 @@
             <artifactId>nekohtml</artifactId>
             <version>1.9.22</version>
         </dependency>
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 </project>

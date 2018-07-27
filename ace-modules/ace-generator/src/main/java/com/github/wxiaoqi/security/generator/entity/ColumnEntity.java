@@ -3,9 +3,7 @@ package com.github.wxiaoqi.security.generator.entity;
 /**
  * 列的属性
  *
- * @author Mr.AG
- * @email 463540703@qq.com
- * @date 2017年08月25日
+ * @author HH
  */
 public class ColumnEntity {
 	//列名

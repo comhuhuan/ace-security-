@@ -10,14 +10,11 @@ generator.columns = function () {
     return [{
         checkbox: true
     }, {
-        field: 'tableName',
+        field: 'TABLE_NAME',
         title: '表名'
     }, {
-        field: 'tableComment',
+        field: 'TABLE_COMMENT',
         title: '表备注'
-    }, {
-        field: 'createTime',
-        title: '创建时间'
     }];
 };
 generator.queryParams = function (params) {
@@ -97,7 +94,7 @@ layui.use(['form', 'layedit', 'laydate'], function () {
         if(generator.select()){
             var tableNames = [];
             for(var i=0;i<generator.currentItems.length;i++){
-                tableNames.push(generator.currentItems[i].tableName);
+                tableNames.push(generator.currentItems[i].TABLE_NAME);
             }
             location.href = "/base/generator/code?tables=" + JSON.stringify(tableNames);
         }

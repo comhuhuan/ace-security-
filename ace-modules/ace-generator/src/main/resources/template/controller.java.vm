@@ -1,13 +1,20 @@
-package ${package}.rest;
-
-import com.github.wxiaoqi.security.common.rest.BaseController;
-import ${package}.biz.${className}Biz;
-import ${package}.entity.${className};
+import ${package};
+import com.midea.mdp.core.util.ContextUtils;
+import com.midea.mdp.extend.comm.constant.ConstantValue;
+import com.midea.mdp.extend.web.BaseController;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
-@Controller
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@Component
+@Controller("sourcing_controller_${secondModuleName}")
 @RequestMapping("${secondModuleName}")
-public class ${className}Controller extends BaseController<${className}Biz,${className}> {
+public class ${className}Controller extends BaseController {
 
 }

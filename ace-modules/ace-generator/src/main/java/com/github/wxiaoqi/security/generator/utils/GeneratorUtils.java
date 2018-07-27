@@ -1,5 +1,7 @@
 package com.github.wxiaoqi.security.generator.utils;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.github.wxiaoqi.security.generator.entity.ColumnEntity;
 import com.github.wxiaoqi.security.generator.entity.TableEntity;
 import org.apache.commons.configuration.Configuration;
@@ -50,21 +52,22 @@ public class GeneratorUtils {
 
         //表信息
         TableEntity tableEntity = new TableEntity();
-        tableEntity.setTableName(table.get("tableName"));
-        tableEntity.setComments(table.get("tableComment"));
+        tableEntity.setTableName(table.get("TABLE_NAME"));
+        tableEntity.setComments(table.get("TABLE_COMMENT"));
         //表名转换成Java类名
         String className = tableToJava(tableEntity.getTableName(), config.getString("tablePrefix"));
         tableEntity.setClassName(className);
         tableEntity.setClassname(StringUtils.uncapitalize(className));
 
+
         //列信息
         List<ColumnEntity> columsList = new ArrayList<>();
         for (Map<String, String> column : columns) {
             ColumnEntity columnEntity = new ColumnEntity();
-            columnEntity.setColumnName(column.get("columnName"));
-            columnEntity.setDataType(column.get("dataType"));
-            columnEntity.setComments(column.get("columnComment"));
-            columnEntity.setExtra(column.get("extra"));
+            columnEntity.setColumnName(column.get("COLUMN_NAME"));
+            columnEntity.setDataType(column.get("DATA_TYPE"));
+            columnEntity.setComments(column.get("COMMENTS"));
+//            columnEntity.setExtra(column.get("extra"));
 
             //列名转换成Java属性名
             String attrName = columnToJava(columnEntity.getColumnName());
@@ -76,7 +79,7 @@ public class GeneratorUtils {
             columnEntity.setAttrType(attrType);
 
             //是否主键
-            if ("PRI".equalsIgnoreCase(column.get("columnKey")) && tableEntity.getPk() == null) {
+            if ("P".equalsIgnoreCase(column.get("columnKey")) && tableEntity.getPk() == null) {
                 tableEntity.setPk(columnEntity);
             }
 

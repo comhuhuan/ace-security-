@@ -5,9 +5,7 @@ import java.util.List;
 /**
  * 表数据
  *
- * @author Mr.AG
- * @email 463540703@qq.com
- * @date 2017年08月25日
+ * @author HH
  */
 public class TableEntity {
 	//表的名称

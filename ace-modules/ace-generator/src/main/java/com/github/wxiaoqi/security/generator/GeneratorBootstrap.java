@@ -5,9 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author Mr.AG
- * @email 463540703@qq.com
- * @date 2017年08月25日
+ * @author HH
  */
 @SpringBootApplication
 @MapperScan("com.github.wxiaoqi.security.generator.mapper")

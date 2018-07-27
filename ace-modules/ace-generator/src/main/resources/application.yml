@@ -9,10 +9,10 @@ server:
 spring:
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
-        driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://localhost:3306/ag_auth?useUnicode=true&characterEncoding=UTF-8
-        username: root
-        password: 123456
+        driverClassName: oracle.jdbc.driver.OracleDriver
+        url: jdbc:oracle:thin:@//cdftest-db.gz.cvte.cn:1521/ptest_newsrm
+        username: srm
+        password: srm
     jackson:
         time-zone: GMT+8
         date-format: yyyy-MM-dd HH:mm:ss
@@ -20,7 +20,11 @@ spring:
         mode: LEGACYHTML5
         cache: false
 
+
+
+
 # Mybatis配置
 mybatis:
     mapperLocations: classpath:mapper/**/*.xml
+
 
