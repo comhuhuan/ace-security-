@@ -11,7 +11,7 @@ spring:
         default-property-inclusion: non_null
     datasource:
         name: test
-        url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ag_admin_v1?useUnicode=true&characterEncoding=UTF8
+        url: jdbc:mysql://${MYSQL_HOST:119.29.54.124}:${MYSQL_PORT:12345}/ag_admin_v1?useUnicode=true&characterEncoding=UTF8
         username: root
         password: 123456
         # 使用druid数据源
@@ -31,7 +31,7 @@ spring:
         poolPreparedStatements: true
         maxOpenPreparedStatements: 20
     rabbitmq:
-        host: ${RABBIT_MQ_HOST:localhost}
+        host: ${RABBIT_MQ_HOST:119.29.54.124}
         port:  ${RABBIT_MQ_PORT:5672}
         username: guest
         password: guest
@@ -121,7 +121,7 @@ redis:
          maxActive: 300
          maxIdle: 100
          maxWait: 1000
-    host: ${REDIS_HOST:localhost}
+    host: ${REDIS_HOST:119.29.54.124}
     port:  ${REDIS_PORT:6379}
     password:
     timeout: 2000

@@ -7,13 +7,13 @@ spring:
         default-property-inclusion: non_null
     redis:
         database: 1
-        host: ${REDIS_HOST:localhost}
+        host: ${REDIS_HOST:119.29.54.124}
         port: ${REDIS_PORT:6379}
         pool:
         max-active: 20
     datasource:
       name: test
-      url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/ag_auth_v1?useUnicode=true&characterEncoding=UTF8
+      url: jdbc:mysql://${MYSQL_HOST:119.29.54.124}:${MYSQL_PORT:12345}/ag_auth_v1?useUnicode=true&characterEncoding=UTF8
       username: root
       password: 123456
       # 使用druid数据源
@@ -33,7 +33,7 @@ spring:
       poolPreparedStatements: true
       maxOpenPreparedStatements: 20
     rabbitmq:
-      host: ${RABBIT_MQ_HOST:localhost}
+      host: ${RABBIT_MQ_HOST:119.29.54.124}
       port:  ${RABBIT_MQ_PORT:5672}
       username: guest
       password: guest

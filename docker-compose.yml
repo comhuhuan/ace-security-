@@ -13,11 +13,11 @@ services:
     environment:
       - EUREKA_HOST=eureka
       - EUREKA_PORT=8761
-      - REDIS_HOST=redis
+      - REDIS_HOST=119.29.54.124
       - REDIS_PORT=6379
-      - MYSQL_HOST=mysql
-      - MYSQL_PORT=3306
-      - RABBIT_MQ_HOST=rabbitmq
+      - MYSQL_HOST=119.29.54.124
+      - MYSQL_PORT=12345
+      - RABBIT_MQ_HOST=119.29.54.124
       - RABBIT_MQ_HOST=5672
   ace-admin:
     image: ag/ace-admin
@@ -30,11 +30,11 @@ services:
     environment:
       - EUREKA_HOST=eureka
       - EUREKA_PORT=8761
-      - REDIS_HOST=redis
+      - REDIS_HOST=119.29.54.124
       - REDIS_PORT=6379
-      - MYSQL_HOST=mysql
-      - MYSQL_PORT=3306
-      - RABBIT_MQ_HOST=rabbitmq
+      - MYSQL_HOST=119.29.54.124
+      - MYSQL_PORT=12345
+      - RABBIT_MQ_HOST=119.29.54.124
       - RABBIT_MQ_HOST=5672
   ace-gate:
     image: ag/ace-gate
@@ -47,7 +47,7 @@ services:
     environment:
       - EUREKA_HOST=eureka
       - EUREKA_PORT=8761
-      - RABBIT_MQ_HOST=rabbitmq
+      - RABBIT_MQ_HOST=119.29.54.124
       - RABBIT_MQ_HOST=5672
   redis:
     image: redis
